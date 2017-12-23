@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
                    to play a video or audio file from a URL.
                    DESC
 
-  s.homepage     = "https://github.com/brion/OGVKit"
+  s.homepage     = "https://github.com/acedened/OGVKit"
 
   s.license      = { :type => "MIT", :file => "LICENSE" }
 
@@ -88,6 +88,10 @@ Pod::Spec.new do |s|
       swebmvorbis.dependency 'OGVKit/WebMDemuxer'
       swebmvorbis.dependency 'OGVKit/VorbisDecoder'
     end
+    swebm.subspec "Opus" do |swebmopus|
+      swebmopus.dependency 'OGVKit/WebMDemuxer'
+      swebmopus.dependency 'OGVKit/OpusDecoder'
+    end
   end
 
   # Demuxer module subspecs
@@ -128,6 +132,12 @@ Pod::Spec.new do |s|
     svorbisdecoder.xcconfig = { 'OTHER_CFLAGS' => '-DOGVKIT_HAVE_VORBIS_DECODER' }
     svorbisdecoder.dependency 'OGVKit/Core'
     svorbisdecoder.dependency 'libvorbis'
+  end
+
+  s.subspec "OpusDecoder" do |sopusdecoder|
+    sopusdecoder.xcconfig = { 'OTHER_CFLAGS' => '-DOGVKIT_HAVE_OPUS_DECODER'  }
+    sopusdecoder.dependency 'OGVKit/Core'
+    sopusdecoder.dependency 'libopus'
   end
 
   # Additional libraries not ready to package separately
