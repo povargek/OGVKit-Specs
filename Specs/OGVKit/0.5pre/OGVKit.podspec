@@ -36,11 +36,14 @@ Pod::Spec.new do |s|
                          "Classes/OGVVideoBuffer.{h,m}",
                          "Classes/OGVHTTPContentRange.{h,m}",
                          "Classes/OGVInputStream.{h,m}",
+                         "Classes/OGVDataInputStream.{h,m}",
+                         "Classes/OGVFileInputStream.{h,m}",
+                         "Classes/OGVHTTPInputStream.{h,m}",
                          "Classes/OGVDecoder.{h,m}",
                          "Classes/OGVFrameView.{h,m}",
                          "Classes/OGVAudioFeeder.{h,m}",
                          "Classes/OGVPlayerState.{h,m}",
-                         "Classes/OGVPlayerView.{h,m}"
+                        "Classes/OGVPlayerView.{h,m}"
 
     score.public_header_files = "Classes/OGVKit.h",
                                 "Classes/OGVMediaType.h",
