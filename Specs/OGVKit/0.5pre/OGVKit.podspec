@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
                    to play a video or audio file from a URL.
                    DESC
 
-  s.homepage     = "https://github.com/acedened/OGVKit"
+  s.homepage     = "https://github.com/brion/OGVKit"
 
   s.license      = { :type => "MIT", :file => "LICENSE" }
 
